@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>متجر أدوات السباكة والصحية</title>
+  <link rel="stylesheet" href="style.css.CSS">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    🚚 شحن مجاني للطلبات الأكبر من 2000 ج.م | خصومات حصريّة لفترة محدودة!
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">سباكة<span>ستور</span></div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="ابحث عن خلاط، حوض، محبس...">
+    </div>
+    <div class="cart-btn" id="cartBtn">
+      🛒 السلة (<span id="cartCount">0</span>)
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>أفضل خامات وأدوات السباكة والصحية</h1>
+    <p>جودة عالية وضمان على جميع الخلاطات والمستلزمات</p>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Filter Sidebar -->
+    <aside class="sidebar">
+      <h3>التصنيفات</h3>
+      <ul class="category-list">
+        <li class="active" onclick="filterCategory('all', this)">الكل</li>
+        <li onclick="filterCategory('faucets', this)">خلاطات ومحابس</li>
+        <li onclick="filterCategory('sinks', this)">أحواض وقواعد</li>
+        <li onclick="filterCategory('showers', this)">دش ومستلزمات الشاور</li>
+      </ul>
+
+      <h3 style="margin-top: 25px;">ترتيب المنتجات</h3>
+      <select id="sortSelect" class="sort-select" onchange="sortProducts(this.value)">
+        <option value="default">الافتراضي</option>
+        <option value="low-to-high">السعر: من الأقل للأعلى</option>
+        <option value="high-to-low">السعر: من الأعلى للأقل</option>
+      </select>
+    </aside>
+
+    <!-- Product Grid -->
+    <main class="products-grid" id="productsGrid">
+      <!-- المنتجات تظهر ديناميكيًا عبر JavaScript -->
+    </main>
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+      <h2>سلة المشتريات</h2>
+      
+      <!-- قائمة عناصر السلة -->
+      <div id="cartItems"></div>
+      
+      <div class="cart-total">المجموع: <span id="totalPrice">0</span> ج.م</div>
+
+      <!-- حقول بيانات العميل -->
+      <div class="customer-info">
+        <input type="text" id="customerName" placeholder="الاسم بالكامل *" required>
+        <input type="tel" id="customerPhone" placeholder="رقم الهاتف للتواصل *" required>
+        <input type="text" id="customerAddress" placeholder="عنوان التوصيل (المدينة / الشارع) *" required>
+      </div>
+
+      <button class="checkout-btn" onclick="checkout()">إتمام الطلب عبر الواتساب</button>
+      <button class="close-btn" id="closeCart">إغلاق</button>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js.JS"></script>
+</body>
+</html>
