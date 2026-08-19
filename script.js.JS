@@ -174,7 +174,7 @@ function checkout() {
   }
 
   // ⚠️ ضع رقم الواتساب الخاص بك هنا
-  const storePhone = "+201287503221";
+  const storePhone = "+201102511772";
 
   let message = "📦 *طلب جديد من المتجر الإلكتروني*\n\n";
   message += "👤 *بيانات العميل:*\n";
