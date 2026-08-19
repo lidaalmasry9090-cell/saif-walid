@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>متجر أدوات السباكة والصحية</title>
-  <link rel="stylesheet" href="style.css.CSS"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- تم تصحيح امتداد ملف CSS -->
+  <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
@@ -43,7 +43,7 @@
         <li onclick="filterCategory('showers', this)">دش ومستلزمات الشاور</li>
       </ul>
 
-      <h3 style="margin-top: 25px;">ترتيب المنتجات</h3>
+      <h3 style="margin-top: 20px;">ترتيب المنتجات</h3>
       <select id="sortSelect" class="sort-select" onchange="sortProducts(this.value)">
         <option value="default">الافتراضي</option>
         <option value="low-to-high">السعر: من الأقل للأعلى</option>
@@ -62,12 +62,10 @@
     <div class="cart-content">
       <h2>سلة المشتريات</h2>
       
-      <!-- قائمة عناصر السلة -->
       <div id="cartItems"></div>
       
       <div class="cart-total">المجموع: <span id="totalPrice">0</span> ج.م</div>
 
-      <!-- حقول بيانات العميل -->
       <div class="customer-info">
         <input type="text" id="customerName" placeholder="الاسم بالكامل *" required>
         <input type="tel" id="customerPhone" placeholder="رقم الهاتف للتواصل *" required>
@@ -82,6 +80,7 @@
   <!-- Toast Container -->
   <div id="toast" class="toast"></div>
 
-  <script src="script.js.JS"></script>
+  <!-- تم تصحيح امتداد ملف JS -->
+  <script src="script.js"></script>
 </body>
 </html>
